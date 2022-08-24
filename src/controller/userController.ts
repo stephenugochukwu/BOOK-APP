@@ -100,6 +100,7 @@ export async function LoginUser(
       res.render("dashboard", { record });
     }
   } catch (err) {
+    console.log(err)
     res.status(500).json({
       msg: "failed to login",
       route: "/login",
@@ -138,6 +139,7 @@ export async function defaultView(
 
     res.render("dashboard", { record });
   } catch (err) {
+    console.log(err)
     res.status(500).json({
       msg: "failed to login",
       route: "/login",

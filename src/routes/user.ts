@@ -21,9 +21,7 @@ router.get("/updatebook", (req, res) => {
 router.get("/editbook", (req, res) => {
   res.render("editbook");
 });
-router.get("/dashboard", defaultView, (req, res) => {
-  res.render("dashboard");
-});
+router.get("/dashboard", defaultView);
 
 router.post("/login", LoginUser);
 router.get("/logout", LogoutUser);

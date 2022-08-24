@@ -88,6 +88,7 @@ async function LoginUser(req, res, next) {
         }
     }
     catch (err) {
+        console.log(err);
         res.status(500).json({
             msg: "failed to login",
             route: "/login",
@@ -119,6 +120,7 @@ async function defaultView(req, res, next) {
         res.render("dashboard", { record });
     }
     catch (err) {
+        console.log(err);
         res.status(500).json({
             msg: "failed to login",
             route: "/login",
